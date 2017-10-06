@@ -7,10 +7,10 @@ pub struct AnalogInput {
 //    m_accumulatorOffset: i64,
 }
 
-impl AnalogInput {
-    const kAccumulatorModuleNumber: i32 = 1;
-    const kAccumulatorNumChannels: i32 = 2;
-    const kAccumulatorChannels: [i32; 2] = [0, 1];
+pub impl AnalogInput {
+    pub const kAccumulatorModuleNumber: i32 = 1;
+    pub const kAccumulatorNumChannels: i32 = 2;
+    pub const kAccumulatorChannels: [i32; 2] = [0, 1];
 
     pub fn fromChannel(channel: i32) -> Self {
         // todo: bounds checking on channel
@@ -40,7 +40,7 @@ impl AnalogInput {
 }
 
 impl Drop for AnalogInput {
-    fn drop(&mut self) {
+    pub fn drop(&mut self) {
         unsafe { HAL_FreeAnalogInputPort(self.m_port); }
         self.m_port = HAL_kInvalidHandle as i32;
     }
