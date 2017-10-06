@@ -25,13 +25,13 @@ impl AnalogInput {
             m_port: analogPort
         };
     }
-    pub fn getValue(&self) -> i32 {
+    pub fn get_value(&self) -> i32 {
         let mut status: i32 = 0;
         let value = unsafe { HAL_GetAnalogValue(self.m_port, &mut status) };
         // todo: check error status
         return value;
     }
-    pub fn getVoltage(&self) -> f64 {
+    pub fn get_voltage(&self) -> f64 {
         let mut status: i32 = 0;
         let value = unsafe { HAL_GetAnalogVoltage(self.m_port, &mut status) };
         // todo: check error status
