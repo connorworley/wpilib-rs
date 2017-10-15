@@ -1,5 +1,4 @@
-extern crate frchal;
-use frchal::*;
+use hal::*;
 
 pub struct AnalogInput {
     m_channel: i32,

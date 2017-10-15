@@ -3,5 +3,5 @@ name = "wpilib"
 version = "2017.3.1"
 authors = ["Connor Worley <connorbworley@gmail.com>"]
 
-[dependencies]
-frchal = { git = "https://github.com/connorworley/frchal-rs" }
+[build-dependencies]
+bindgen = "0.30.0"
