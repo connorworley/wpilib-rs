@@ -1,4 +1,4 @@
-# wpilib-rs
+# wpilib-rs  [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/wpilib-rs)
 wpilib-rs is a Rust port of [WPILib](https://github.com/wpilibsuite/allwpilib). The project binds the C library for the RoboRIO HAL, with WPILib C++ classes ported to pure Rust.
 
 ## Usage
